@@ -1,0 +1,10 @@
+{
+  "description": "Comprehensive inventory and sales management system with user roles, online payments, order tracking, and customer communication for textile businesses.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

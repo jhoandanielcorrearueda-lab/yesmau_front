@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="YESMAU, plataforma integral para la gestión de talleres y marcas de moda."
+    />
+    <title>YESMAU — Gestión textil</title>
+    <link rel="icon" type="image/png" href="/assets/yesmau-logo.png" />
+    <script>
+      document.documentElement.dataset.theme =
+        localStorage.getItem("yesmau_theme") ||
+        (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    </script>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <svg class="svg-library" aria-hidden="true">
+      <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></symbol>
+      <symbol id="i-box" viewBox="0 0 24 24"><path d="m4 7 8-4 8 4-8 4-8-4Z"/><path d="m4 7v10l8 4 8-4V7M12 11v10"/></symbol>
+      <symbol id="i-shirt" viewBox="0 0 24 24"><path d="M8 4 4 6l-2 5 4 2v8h12v-8l4-2-2-5-4-2c-.7 2-2 3-4 3S8.7 6 8 4Z"/></symbol>
+      <symbol id="i-cart" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.6L21 8H6"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+      <symbol id="i-factory" viewBox="0 0 24 24"><path d="M3 21V9l6 3V9l6 3V5h6v16H3Z"/><path d="M7 17h1m4 0h1m4 0h1"/></symbol>
+      <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m7 16 4-5 4 3 5-7"/></symbol>
+      <symbol id="i-scissors" viewBox="0 0 24 24"><circle cx="6" cy="7" r="3"/><circle cx="6" cy="17" r="3"/><path d="m8.7 8.3 12.3 6.2M8.7 15.7 21 9.5"/></symbol>
+      <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.7 2.2 18a2 2 0 0 0 1.7 3h16.2a2 2 0 0 0 1.7-3L13.7 3.7a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4m0 4h.01"/></symbol>
+      <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2.8 2.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6v.2h-4V21a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1L4.2 17l.1-.1a1.7 1.7 0 0 0 .3-1.9A1.7 1.7 0 0 0 3 14H2.8v-4H3a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9L4.2 7 7 4.2l.1.1A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-1.6v-.2h4V3a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1L19.8 7l-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1h.2v4H21a1.7 1.7 0 0 0-1.6 1Z"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+      <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+      <symbol id="i-more" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/></symbol>
+      <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2V3Z"/><path d="M9 8h6m-6 4h6"/></symbol>
+      <symbol id="i-ruler" viewBox="0 0 24 24"><path d="m3 17 14-14 4 4L7 21l-4-4Z"/><path d="m14 6 4 4M11 9l2 2m-5 1 2 2m-5 1 2 2"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+      <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="m12 3 1.4 4.6L18 9l-4.6 1.4L12 15l-1.4-4.6L6 9l4.6-1.4L12 3Z"/><path d="m19 15 .7 2.3L22 18l-2.3.7L19 21l-.7-2.3L16 18l2.3-.7L19 15Z"/></symbol>
+      <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9" r="1.5"/><path d="m21 15-5-5L5 20"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></symbol>
+      <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.5L3 20.5l1.3-4.7A8.5 8.5 0 1 1 20.5 11.7Z"/><path d="M8.2 7.7c.2-.4.4-.4.7-.4h.5c.2 0 .3.1.4.4l.7 1.7c.1.3 0 .5-.2.7l-.6.7c-.2.2-.1.4 0 .6.7 1.2 1.6 2.1 2.8 2.7.2.1.4.1.6-.1l.8-1c.2-.2.4-.3.7-.2l1.8.8c.3.1.4.3.4.5 0 .5-.2 1.4-.7 1.8-.5.5-1.4.7-2.2.5-1.1-.2-2.5-.8-4.2-2.3-1.4-1.3-2.4-2.8-2.7-4-.3-.9.1-1.8.4-2.4Z"/></symbol>
+    </svg>
+
+    <section id="authRoot" class="auth-root" aria-live="polite"></section>
+
+    <div class="app-shell" id="appShell" hidden>
+      <aside class="sidebar" id="sidebar">
+        <div class="brand">
+          <span class="company-logo company-logo-sidebar"><img src="/assets/yesmau-logo.png" alt="YESMAU Ropa Casual" /></span>
+          <div><strong>YESMAU</strong><small>GESTIÓN TEXTIL</small></div>
+        </div>
+        <button class="sidebar-close icon-button" id="sidebarClose" aria-label="Cerrar menú"><svg><use href="#i-x"></use></svg></button>
+
+        <nav class="main-nav" aria-label="Navegación principal">
+          <p class="nav-label">ESPACIO DE TRABAJO</p>
+          <button class="nav-item active" data-view="dashboard"><svg><use href="#i-grid"></use></svg><span>Vista general</span></button>
+          <button class="nav-item client-only" data-view="client-shop" hidden><svg><use href="#i-shirt"></use></svg><span>Tienda</span></button>
+          <button class="nav-item client-only" data-view="client-cart" hidden><svg><use href="#i-cart"></use></svg><span>Carrito</span></button>
+          <button class="nav-item client-only" data-view="client-orders" hidden><svg><use href="#i-box"></use></svg><span>Mis pedidos</span></button>
+          <button class="nav-item client-only" data-view="client-favorites" hidden><svg><use href="#i-heart"></use></svg><span>Mis favoritos</span></button>
+          <button class="nav-item client-only" data-view="client-incidents" hidden><svg><use href="#i-alert"></use></svg><span>Mis incidencias</span></button>
+          <button class="nav-item staff-only" data-view="tienda"><svg><use href="#i-shirt"></use></svg><span>Tienda</span></button>
+          <button class="nav-item" data-view="pedidos"><svg><use href="#i-box"></use></svg><span>Pedidos</span><b id="newOrdersBadge" hidden></b></button>
+          <button class="nav-item" data-view="inventario"><svg><use href="#i-shirt"></use></svg><span>Inventario</span></button>
+          <button class="nav-item" data-view="ventas"><svg><use href="#i-chart"></use></svg><span>Ventas y facturas</span></button>
+          <button class="nav-item" data-view="compras"><svg><use href="#i-cart"></use></svg><span>Compras</span></button>
+
+          <p class="nav-label">PRODUCCIÓN</p>
+          <button class="nav-item" data-view="telas"><svg><use href="#i-scissors"></use></svg><span>Telas y materias</span></button>
+          <button class="nav-item" data-view="retazos"><svg><use href="#i-sparkle"></use></svg><span>Retazos inteligentes</span></button>
+          <button class="nav-item" data-view="proveedores"><svg><use href="#i-factory"></use></svg><span>Proveedores</span></button>
+          <button class="nav-item" data-view="incidencias"><svg><use href="#i-alert"></use></svg><span>Incidencias</span><i></i></button>
+
+          <p class="nav-label">ADMINISTRACIÓN</p>
+          <button class="nav-item" data-view="clientes"><svg><use href="#i-users"></use></svg><span>Usuarios y clientes</span></button>
+          <button class="nav-item" data-view="roles"><svg><use href="#i-settings"></use></svg><span>Roles y permisos</span></button>
+          <button class="nav-item admin-only" data-view="contenido"><svg><use href="#i-image"></use></svg><span>Contenido web</span></button>
+          <button class="nav-item admin-only" data-view="precios"><svg><use href="#i-receipt"></use></svg><span>Precio de prendas</span></button>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="ai-usage-panel" id="aiUsagePanel">
+            <div class="storage-row"><span>Consumo de YESMAU IA</span><strong id="aiUsagePercent">0%</strong></div>
+            <div class="progress" id="aiUsageProgress" role="progressbar" aria-label="Consumo de consultas de YESMAU IA" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+            <small id="aiUsageDetail">0 de 10 consultas utilizadas</small>
+          </div>
+          <button class="support-button" id="whatsappBtn">
+            <span class="support-icon"><svg aria-hidden="true"><use href="#i-whatsapp"></use></svg></span>
+            <span><strong>¿Necesitas ayuda?</strong><small>Escríbenos por WhatsApp</small></span>
+            <svg><use href="#i-chevron"></use></svg>
+          </button>
+        </div>
+      </aside>
+
+      <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+      <main class="main-area">
+        <header class="topbar">
+          <button class="mobile-menu icon-button" id="mobileMenu" aria-label="Abrir o contraer menú"><svg><use href="#i-menu"></use></svg></button>
+          <div class="global-search">
+            <svg><use href="#i-search"></use></svg>
+            <input id="globalSearch" type="search" placeholder="Buscar pedidos, artículos, clientes..." aria-label="Buscar" />
+            <kbd></kbd>
+            <div class="global-search-results" id="globalSearchResults" role="listbox" aria-label="Artículos relacionados" hidden></div>
+          </div>
+          <div class="top-actions">
+            <button class="icon-button theme-button" data-theme-toggle aria-label="Activar modo oscuro" title="Cambiar tema"><svg><use href="#i-moon"></use></svg></button>
+            <button class="icon-button cart-button" id="cartBtn" aria-label="Carrito de compras"><svg><use href="#i-cart"></use></svg><span>0</span></button>
+            <button class="icon-button notification-button" id="notificationBtn" aria-label="Notificaciones"><svg><use href="#i-bell"></use></svg><span></span></button>
+            <div class="divider"></div>
+            <button class="profile-button" id="profileBtn" type="button" aria-expanded="false" aria-controls="profilePanel">
+              <span class="avatar">EC</span>
+              <span class="profile-copy"><strong>Elena Cast</strong><small>Administradora</small></span>
+              <span class="profile-menu-indicator" aria-hidden="true"><svg><use href="#i-chevron"></use></svg></span>
+            </button>
+          </div>
+          <div class="popover notifications" id="notificationPanel">
+            <div class="popover-title"><strong>Notificaciones</strong><button data-close-popover>Marcar leídas</button></div>
+            <div class="notice unread"><span></span><div><strong>Pedido #1048 actualizado</strong><small>Pasó a control de calidad · hace 8 min</small></div></div>
+            <div class="notice unread"><span></span><div><strong>Stock bajo de lino Siena</strong><small>Quedan 6.2 metros · hace 1 h</small></div></div>
+            <div class="notice"><span></span><div><strong>Pago recibido</strong><small>Stripe · Visa •••• 4242 confirmó $284.000 COP · ayer</small></div></div>
+          </div>
+          <div class="popover profile-menu" id="profilePanel">
+            <button data-action="perfil">Mi perfil</button>
+            <button data-action="seguridad">Seguridad y contraseña</button>
+            <button data-action="salir">Cerrar sesión</button>
+          </div>
+        </header>
+
+        <section id="viewContainer" class="content"></section>
+      </main>
+    </div>
+
+    <div class="modal-backdrop" id="modalBackdrop" hidden>
+      <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close icon-button" id="modalClose" aria-label="Cerrar"><svg><use href="#i-x"></use></svg></button>
+        <div id="modalContent"></div>
+      </section>
+    </div>
+
+    <div class="toast" id="toast" role="status"></div>
+    <a class="whatsapp-widget" id="whatsappWidget" target="_blank" rel="noopener" aria-label="Contactar a YESMAU por WhatsApp" hidden>
+      <span><svg aria-hidden="true"><use href="#i-whatsapp"></use></svg></span><strong>¿Necesitas ayuda?</strong><small id="whatsappNumber">WhatsApp por configurar</small>
+    </a>
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>
